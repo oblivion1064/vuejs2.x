@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <title>Ders 2: v-bind ve event'ler</title>
+        <script src="https://unpkg.com/vue"></script>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <h2>{{imageIndex + 1}}/{{gallery.length}}</h2>
+                <div class="single-img-container">
+                    <img v-on:click="ileriGit" v-bind:src="gallery[imageIndex]" />
+                </div>
+                <div class="all-images">
+                    <img v-for="(img, index) in gallery" v-bind:id="index === imageIndex ? 'active' : null" v-on:click="() => fotoyaGit(index)" v-bind:src="img" />
+                </div>
+                <div>
+                    <button v-on:click="geriGit">GERİ</button>
+                    <button v-on:click="ileriGit">İLERİ</button>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
