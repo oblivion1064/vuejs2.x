@@ -1,8 +1,0 @@
-new Vue({
-    data:{
-        
-    },
-    methods:{
-
-    }
-});
