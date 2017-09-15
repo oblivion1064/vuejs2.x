@@ -60,7 +60,7 @@ button:active {
 .all-images img {
     height:70px;
     width:70px;
-    margin:4px;
+    margin:5px;
     border:1px solid #999;
 }
 #active {
